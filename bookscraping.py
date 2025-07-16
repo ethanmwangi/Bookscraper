@@ -35,7 +35,7 @@ def main():
     for product in products:
         product['price_kes'] = convertCurrency(product['price'])
 
-    with open('priceproducts.json', 'w') as jsonFile:
+    with open('product.json', 'w') as jsonFile:
         json.dump(products, jsonFile, indent=4)
 
     tableData = [[product['name'], f"£{product['price']:.2f}", f"KSh {product['price_kes']:.2f}"] for product in products]
